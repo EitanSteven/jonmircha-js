@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Arrow Functions!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Arrow Functions de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~~~~ Empezando la Practica ~~~~~~~~~~~~')
+
+
+// Las funciones Flecha, son mucho mas declarativas, abreviadas y regresan un return implicito. La estructura basica de una Arrow Function es la siguiente:
+
+const saludar = () => {
+    console.log('Saludo')
+}
+
+// Cuando la linea de codigo es una sola, podemos omitir las llaves:
+
+const saludar2 = () => console.log('Saludo2')
+
+// Y cuando es un solo parametro el que recibe
+
+const saludar3 = (nombre) => console.log(`Saludo para: ${nombre}`)
+
+// Podemos omitir los parentesis:
+
+const saludar4 = nombre => console.log(`Saludo para: ${nombre}`)
+
+// Ahora, para ver mejor la propiedad de Return Implicito, hagamos una calculadora:
+
+const suma = (a,b) => a + b
+
+
+saludar()
+saludar2()
+saludar3('Eitan')
+saludar4('Eitan')
+console.log(suma(2,2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

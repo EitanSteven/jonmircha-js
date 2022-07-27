@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+
+// MAPS sirven apra almacenar valor asociados a manera de obj
+
+
+const mapa = new Map()
+mapa.set("Nombre", "Jhon")
+mapa.set("Especie", "Wanaco")
+mapa.set("Edad", "200")
+
+console.log(mapa)
+console.log(mapa.size)
+console.log(mapa.has("Correo"))
+console.log(mapa.has("Nombre"))
+
+// Podemos sobre escribir una propiedad:
+mapa.set("Nombre", "Pepe")
+console.log(mapa.get("Nombre"))
+mapa.delete("Edad")
+console.log(mapa)
+
+// Map es un obj iterable:
+
+for (let [key, value] of mapa) {
+    console.log(`Llave: ${key}, Value: ${value}`)
+} 
+
+const mapa2 = new Map([
+    ["Nombre", "Juan"],
+    ["Apellido", "Pinochet"],
+    ["Edad", -100]
+])
+
+console.log(mapa2)
+
+// Podemos desestructurar las llaves y los valores
+
+const llavesMapa2 = [...mapa2.keys()]
+const valueMapa2 = [...mapa2.values()]
+console.log(llavesMapa2)
+console.log(valueMapa2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

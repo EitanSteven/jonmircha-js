@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITERABLES</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+// Iterables e Iteradores
+
+// Iterable: Un elemento que se puede recorrer
+// Iterador: Quien recorre el elemento
+
+const iterable = [1,2,3,4,5]
+
+//Accedemos al iterador de iterable
+const iterador = iterable[Symbol.iterator]()
+
+console.log(iterador)
+
+//console.log(iterador.next())    // Devuelve un value, y un bolean que dice si el elemento se termino de recorrer o no
+
+let next = iterador.next()
+
+while (next.done === false) {   // = (!next.done)
+    console.log(next.value)
+    next = iterador.next()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

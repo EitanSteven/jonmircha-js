@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERADORES</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+// Forma mas amigable de trabajar con iteradores
+// El asterisco le dice a js que esto es un iterador
+
+function* iterable() {
+    yield"Hola"
+    console.log("Hola Consola")
+    yield"Hola2"
+    console.log("Seguimos con el codigo")
+    yield"Hola3"
+    yield"Hola4"
+}
+
+// Estos yeild, detienen la funcion. Cuando se vuelva a llamar a esta, la funcion se ejecuta desde donde se quedo
+
+let iterador = iterable()
+
+console.log(iterador.next())    // Devuelve {value: "Hola", done:false}
+console.log(iterador.next())    // Devuelve Hola consola, y hola 2
+console.log(iterador.next())    // || Seguimos con el codigo y el value con hola3
+
+//
+//
+//
+
+// Podemos automatizar la impresion de los yeild(values)
+
+function* iterable2() {
+    yield"Hola"
+    console.log("Hola Consola")
+    yield"Hola2"
+    console.log("Seguimos con el codigo")
+    yield"Hola3"
+    yield"Hola4"
+}
+
+let iterador2 = iterable2()
+
+for (let y of iterador2) {
+    console.log(y)
+}
+
+// Tambien podemos guardar todos los yield en una variable:
+
+const arr = [...iterable2()]
+console.log(arr)
+
+// Ejercicio
+
+
+
+function cuadrado(valor) {
+    setTimeout(() => {
+       return console.log({valor, resultado:valor*valor}) 
+    }, 1000);
+}
+
+function* generador() {
+    console.log('Incia generador')
+    yield cuadrado(2)
+    yield cuadrado(3)
+    yield cuadrado(4)
+    console.log('Termina Generador')
+}
+
+let gen = generador()
+
+for (let y of gen) {
+    console.log(y)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

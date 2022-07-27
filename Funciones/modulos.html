@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos en JS</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+    <h1 style="color: #fff;">MODULOS de Java Script!</h1>
+
+
+    <!-- Para que el HTML y Estilos no tarden en cargar, el codigo js se invoca al final de la pagina-->
+    <script src="js/modulos.js" type="module"></script>
+    <!-- Para que el archivo JS pueda importar/exportar, se le agrega el tipo "modulo"-->
+
+    <!-- Si queremos darle compatibilidad a nav viejos que no soportan modulos: : -->
+    <script src="js/no-mod.js" nomodule></script>
+    <!-- Indicamos que no es un modulo para que los nav nuevos no ejecuten el codigo-->
+</body>
+</html>

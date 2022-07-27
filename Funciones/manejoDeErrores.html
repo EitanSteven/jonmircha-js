@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Manejo de Errores!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Manejo de Errores de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+// A continuacion, la estructura Catch:
+
+/*
+try {
+    console.log('Aqui se agrega el codigo a evaluar')
+} catch (error) {
+    console.log('Aqui se captura cualquier error en el codigo') // No se muestra
+} finally {
+    console.log('Este bloque se ejecuta siempre al final de un bloque try-catch')
+}
+*/
+
+// Ahora, vamos a crear un error con una variable no declarada:
+
+/*
+try {
+    console.log('Aqui se agrega el codigo a evaluar')
+    noExiste
+} catch (error) {
+    console.log('¡¡¡¡ERROR!!!!  ') // Se muestra
+} finally {
+    console.log('Este bloque se ejecuta siempre al final de un bloque try-catch')
+}
+*/
+
+// Esta forma de capturar errores, puede personalizarse. Que de hecho, es lo que suelen hacer los desarrolladores de APIS, para marcar los errores de los programadores, como: "Hey, me estas pasando un String a esta funcion, y yo espero un numero".
+
+// Para personalizar nuestros errores, podemos hacer algo como:
+
+try {
+
+    let numero = 'p'
+
+    if (isNaN(numero)) {
+        throw new Error('El caracter no es un numero') 
+    }
+
+    console.log(numero * numero)
+
+} catch (Error) {
+    console.log(`Se produjo el siguiente error: ${Error}`)
+}
+
+// Finally no suele usarse en el front-end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

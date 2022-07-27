@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Herencia Prototipica!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Herencia Prototipica de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+//      CLASES Y HERENCIA
+
+
+// La POO de JS siempre estuvo basada en prototipos y no en clases, pero desde 2015, el standar de JS nos dio "Azucar Sintatico", es decir, podemos escribir Clases. Pero estas seran compiladas a prototipos (Ya que es en lo que se basa JS)
+
+
+// Vamos a crear una Clase Animal:
+
+
+class Animal {
+
+    //El constructor es un Metodo especial que se ejecuta al inicializar una clase.
+
+    constructor(nombre,genero) {
+        this.nombre = nombre,
+        this.genero = genero
+    }
+
+    //Metodos:
+
+    sonar() {
+        console.log(`-Sonidos de ${this.nombre}-`)
+    }
+
+    saludar() {
+        console.log(`Hola soy un ${this.nombre}`)
+    }
+}
+
+// Ahora invocaremos a nuestro nuevo animal
+
+const MIMI = new Animal('Mimi', 'Hembra')
+const MOMO = new Animal('Momo', 'Macho')
+
+console.log(MIMI)
+console.log(MOMO)
+
+MIMI.sonar()
+MOMO.saludar()
+
+// Al ver los objetos en la consola, vemos que JS sigue trabajando con prototipos.
+
+// Ahora vamos a hacer herencia:
+
+class Perro extends Animal {
+    constructor(nombre, genero, tamaño) {
+        // Con super llamamos al constructor de la clase padre, el cual recibe sus atributos:
+        super(nombre, genero),
+        this.tamaño = tamaño
+    }
+
+        // Tambien podemos sobre escribir metodos:
+
+    saludo(){
+        console.log('Soy un perro y mi sonido es el ladrido')
+    }
+
+    ladrar(){
+        console.log('Woof Woof!')
+    }
+}
+
+const JINA = new Perro('Jina', 'Hembra', 'Pequeño')
+
+console.log(JINA)
+
+// Ahora en la consola, vemos que el prototipo de Perro es Animal
+
+JINA.ladrar()
+JINA.saludo()
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

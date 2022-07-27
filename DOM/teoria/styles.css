@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(180, 180, 180);
+}
+
+/*  Estilos Default de Tarjetas     */
+
+/*
+.cards {
+    border: solid 6px #626262;
+    padding: 1rem;
+}
+*/
+
+.card {
+    display: inline-block;
+    background-color: #222;
+    color: #F7DF1F;
+}
+
+.card figcaption {
+    padding: 1rem;
+    text-align: center;
+}
+
+/*  Estilos para Agregar DInamicamente  */
+
+.rotate45 {
+    transform: rotate(45deg);
+}
+
+.rotate135 {
+    transform: rotate(135deg);
+}
+
+.opacity80 {
+    opacity: 0.8;
+}
+
+.sepia {
+    filter: sepia(1);
+}
+
+
+.eventos-flujo div {
+    padding: 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.uno {
+    background-color: yellow;
+}
+
+.dos {
+    background-color: rgb(155, 131, 0);
+}
+
+.tres {
+    background-color: rgb(255, 255, 155);
+}

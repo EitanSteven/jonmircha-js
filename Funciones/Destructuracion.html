@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Destructuracion!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Destructuracion de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+let numeros = [1,2,3]
+
+// Supongamos que nececitamos guardar cada valor del arreglo en una variable, una forma de hacerlo seria:
+
+let uno = numeros[0]
+let dos = numeros[1]
+let tres = numeros[2]
+
+console.log(uno, dos, tres)
+
+// Ahora hagamoslo con Desestructuracion de Datos:
+
+let [one, two, three] = numeros;
+console.log(one,two,three)
+
+// Se puede hacer lo mismo con objetos:
+
+const Usuario = {
+    nombre: 'Eitan',
+    apellido: 'Gil',
+    edad: 19
+}
+
+let {nombre, apellido, edad} = Usuario
+console.log(nombre,apellido,edad)
+
+// IMPORTANTE, las llaves que rodean a los datos guardados en la variable let, deben ser iguales o correspondientes al tipo de datos al que hacen referencia. one, two three encerrados en corchetes, pues numeros es un Array y nombre, apellido y edad entre llaves pues Usuario es un objeto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asinc Await</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+//  Async - Await
+
+// Funciones Asincronas, trabajan con las promesas
+
+function cuadradoPromise(value) {
+    if (typeof value !== "number") return Promise.reject('Valor no numerico')
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({
+                value: value,
+                result: value * value
+            }) 
+        }, 0 | Math.random() * 100)
+    })
+}
+
+async function funcionAsinc () {
+    try{
+        console.log('Inicio Async FUnction')
+        let obj = await cuadradoPromise(0)  // Espera el result de esa ejecucion antes de pasar a la siguiente linea
+        console.log(`Async Fun: ${obj.value} ${obj.result}`)
+
+        obj = await cuadradoPromise(1)
+        console.log(`Async Fun: ${obj.value} ${obj.result}`)
+
+        obj = await cuadradoPromise("3")
+        console.log(`Async Fun: ${obj.value} ${obj.result}`)
+
+        obj = cuadradoPromise(1)    // Sin await no se ejecuta, e interrumpe las sig lineas
+        console.log(`Async Fun: ${obj.value} ${obj.result}`)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+funcionAsinc()
+
+// Asi ya no se nececita anidar varios then ni una piramide de callbacks
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

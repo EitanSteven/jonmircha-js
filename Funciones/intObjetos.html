@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Objetos!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Objetos de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~~~~ Empezando la Practica ~~~~~~~~~~~~')
+
+//  Un objeto se define con llaves {} Y dentro puede tener una serie de propiedades con el juego Key:Valor:
+
+const Objeto = {
+    Llave: 'Valor'
+}
+
+console.log(Objeto)
+
+// A los Atributos/Propiedades dentro del Obj deben separarse por comas, y dentro de un Obj puede haber otro obj o tipo de dato como una funcion:
+
+const Usuario = {
+    nombre: 'Eitan',
+    apellido: 'Gil',
+    edad: 19,
+    contacto: {
+        mail: 'eitansteven2002@hotmail.com',
+        whatsapp: '+59 9 2284 246942'
+    },
+    saludar: function() {           // A as f dentro de un Obj se las llama "Metodos"
+        console.log(`Hola! ${this.nombre} te saluda ^^`)
+    },
+    pasatiempos: ['Dibujar', 'Programar', 'Escribir', 'Jugar']
+}
+
+console.log(Usuario)
+
+// Asi como en los Arrays, podemos acceder a una parte en especifico del Obj con los corchetes, poniendo la llave entre comillas:
+
+console.log(Usuario['edad'])
+
+// Pero suele usarse <Objeto>.<llave>
+
+console.log(Usuario.apellido)
+console.log(Usuario.contacto)
+console.log(Usuario.contacto.mail)
+console.log(Usuario.pasatiempos[2])
+Usuario.saludar()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

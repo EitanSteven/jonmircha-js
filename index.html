@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de JS</title>
+
+</head>
+<body>
+    <h1>FUNDAMENTOS DE JS</h1>
+
+    <script>
+        var varGlobal = 'Variable Global!'
+        let varLocal = 'Variable de Bloque'
+        const varConstante = 'Variable Constante'
+
+        {
+            let varLocal2 = 'Var dentro del bloque'
+            console.log('Imprimiendo la:', varLocal2)
+        }
+
+        console.log(varGlobal)        
+        console.log(varLocal2)  // Da Error.
+        console.log(varConstante)
+
+    </script>
+
+</body>
+</html>

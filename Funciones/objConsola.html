@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Metodos estaticos!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Metodos estaticos, getters y setters de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+//      Objeto Consola
+
+console.log('Esto es un registro de lo que ah pasado en la app')
+
+console.log(console)
+
+console.error('Esto es un Error')
+
+console.warn('Esto es un warning!')
+
+console.info('Esto es un msj informativo')
+
+let nombre = 'Eitan'
+let apellido = 'Gil'
+let edad = 19
+
+// Otra forma de imprimir las VAR es con "Comodines":
+
+console.log(`Hola soy %s %s, y tengo %d años`, nombre, apellido, edad)
+
+// Siendo %s para strings y %d para edad.
+
+console.clear()
+
+console.group('Grupo que puede abrirse o cerrarse: ')
+console.log('Texto de prueba')
+console.log('Texto de prueba')
+console.log('Texto de prueba')
+console.log('Texto de prueba')
+console.groupEnd()  
+
+console.clear()
+
+//Tambien podemos hacer tablas:
+
+console.table(Object.entries(console))
+console.clear()
+
+// Y podemos ordenarlo de forma alfabetica
+
+console.table(Object.entries(console).sort())
+console.clear()
+
+
+// Ahora con Arrays
+
+const numeros = [1,2,3,4,5]
+const letras = ['a','b','c','d','e']
+
+console.table(numeros)
+console.table(letras)
+
+// Con objs:
+
+const Perro = {
+    nombre: '¨Piti',
+    edad: 17,
+    raza: 'Desconocida',
+    color: 'Cafe'
+}
+
+console.table(Perro)
+console.clear()
+
+// AHora veamos un temporizador que calcula cuanto tarda nuestra pag en cargar:
+
+console.time('Cuanto tarda mi codigo')  // --> Alias
+
+const Arreglo = Array(1000000)
+
+for (let i = 0; i < Arreglo.length; i++) {
+    Array[i] = i
+}
+
+console.timeEnd('Cuanto tarda mi codigo')   // --> Alias
+
+// Los Alias deben ser iguales
+
+console.clear()
+
+// Otro contador, nos permite saber cuantas veces se ejecuto un codigo:
+
+for (let i=0; i <= 100; i++) {
+    console.count('Codigo for')
+    console.log(i)
+}
+
+console.clear()
+
+
+// Por ultimo, .assert nos permite hacer pruebas/test:
+
+
+let x = 3
+let y = 2
+
+pruebaXY = 'Se espera que X sea < que Y'
+/*
+console.assert(condicion, (variables en juego, var con el msj de la prueba))
+*/
+
+console.assert(x < y, (x,y,pruebaXY))
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

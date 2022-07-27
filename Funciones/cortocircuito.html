@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Cortocircuito!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Cortocircuito de JS Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+
+//          Operadores Cortocircuito
+
+/*
+
+Corto || (OR) - Cuando el valor de la izquierda tiende a TRUE, es el valor que se cargara por defecto. Si no, lo hara el de la derecha.
+
+Corto && (AND) - Cuando el valor de la izquierda tienda a FALSE, es el valor que se cargara por defecto. Si no, lo hara el de la derecha.
+
+*/
+
+
+function saludar(nombre) {
+    nombre = nombre || 'Desconocido'
+    console.log(`Hola, ${nombre}`)
+}
+
+// Entendemos, que si le pasamos un parametro, el OR evaluara su parte izq como TRUE, e imprimira el nombre en el saludo. Si no le pasamos un parametro, evalua FALSE, e imprime lo de la derecha
+
+//saludar('Jon')  // --> Imprime el nombre
+//saludar()      // --> Imprime desconocido
+
+// Ahora intentemos con &&
+
+function saludar2(nombre) {
+    nombre = nombre && 'Desconocido'
+    console.log(`Hola, ${nombre}`)
+}
+
+saludar2()       // --> Undefined
+saludar2('Jon') // --> Desconocido
+
+// Lo podemos apreciar mejor de la siguiente manera:
+
+console.log(false && 'Valor Derecho')
+console.log(true && 'Valor Derecho')
+console.log('Cadena izq' && 'Cadena Der')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

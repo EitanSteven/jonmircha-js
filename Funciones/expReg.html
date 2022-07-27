@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int ExpReg!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de ExpReg de JS Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+//      Una EXP REGULAR
+//
+//  Esta es una secuencia de caracteres que forman un patron de busqueda y es utilizado en busquedas  de patrones de cadenas de caracteres.
+//
+// Usos:
+// Validacion de Emails
+// DNI
+// Los digitos de una Tarjeta
+// Etc...
+
+let cadena = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur necessitatibus eaque adipisci molestias corporis omnis modi repellat fugit distinctio praesentium, repellendus ipsum eveniet Loremet ducimus dolores reiciendis esse accusantium expedita laudantium! Fugit alias doloremque eum, accusantium maiores esse quam! Expedita? Lorem"
+
+//  let expReg = new RegExp('Busqueda', 'bandera')
+
+// la expReg anterior tiene dos secciones, 'Busqueda' donde se ingresa el dato a buscar, y 'Badnera' donde va la condicion. Hay muchas y se pueden buscar facilmente.
+
+
+let expReg = new RegExp('Lorem', 'g')  //--> g = Global (Busca todas las coincidencias)
+
+
+// Ahora, para aplicar la expReg a la cadena:
+
+console.log(expReg.test(cadena))
+
+// El metodo test solo devuelve un Boolean que te dice si la palabra esta o no en la cadena. Otro metodo es exec, que devuelve un array con mas informacion:
+
+console.log(expReg.exec(cadena))
+
+// Para contarlos todos, podemos usar la bandera ig, que no discrimina por mayus
+
+let expReg2 = new RegExp('Lorem', 'ig')
+
+console.log(expReg2.exec(cadena))
+
+// Otro formato para declarar una expReg es:
+
+let expReg3 = /Lorem/ig
+
+// Ahora si queremos buscar, por ejm, un numero:
+
+let expReg4 = /\d/ig
+
+console.log(expReg4.exec(cadena))   // Null
+
+// Otra condicion, es cuantas veces se tiene que repetir algo:
+
+let expReg5 = /lorem{1,3}/ig    // Tiene que repetirse entre 1 a 3 veces
+
+console.log(expReg5.test(cadena))   // True
+
+
+// La mayoria de expReg ya utilizadas estan en internet, buscalas.
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

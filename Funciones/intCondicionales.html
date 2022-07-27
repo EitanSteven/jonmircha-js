@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Condicionales!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Condicionales de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+// Estructura de una condicion
+
+/*
+if (Condicion) {
+    Lo que se ejecuta
+}
+elif {
+    Si lo anterior es falso se ejecuta esto
+}
+elif {
+    Si lo anterior es falso se ejecuta esto
+}
+else {
+    Si todo lo anterior es falso, se ejecuta esto
+}
+
+
+*/
+
+// Ejemplo:
+
+let edad = 12
+
+if (edad >= 18) {
+    console.log('Mayor de edad')
+}
+else  {
+    console.log('No es Mayor de edad')
+}
+
+
+//   los Operadores Ternarios, abrevian los condicionales, pero sirven para 1 linea de codigo:
+
+//let nombreVar = (Condicion)? "Resultado si es True": "Resultado si es False"
+
+let eresMayor = (edad >= 18)? "Eres mayor de edad": "Eres menor"
+console.log(eresMayor)
+
+// Switch - Case Se usa cuando una variable va cambiando su valor, por ejemplo, si queremos decir el dia en el que estamos, hay 7 posibilidades (Casos):
+
+/*
+switch (Variable) {
+    case PosibleValorDeVariable:
+        Ejecuccion
+        break;
+
+    default:
+        Si la variable no cae en ningun caso, cierra el Switch
+        break;
+}
+*/
+
+let dia = 22
+
+switch (dia) {
+    case 0:
+        console.log('Hoy es Lunes')
+        break;
+
+    case 1:
+        console.log('Hoy es Martes')
+        break;
+    case 2:
+        console.log('Hoy es Miercoles')
+        break;
+    case 3:
+        console.log('Hoy es Jueves')
+        break;
+    case 4:
+        console.log('Hoy es Viernes')
+        break;
+    case 5:
+        console.log('Hoy es Sabado')
+        break;
+    case 6:
+        console.log('Hoy es Domingo')
+        break;
+
+    default:
+        console.log('No se encuentra el dia')
+        break;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

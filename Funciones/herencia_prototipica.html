@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Herencia Prototipica!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Herencia Prototipica de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+//   Herencia Prototipica 
+//       - Lo que sucede tras bambalinas de las Clases.
+
+
+function Animal(nombre, genero) {   // ---> Nuestra constructora de Animales
+// Atributos:
+    this.nombre = nombre,
+    this.genero = genero
+}
+
+// Ahora crearemos un constructor para perros, heredando los atributos de su funcion padre, Animal
+
+function Perros(nombre, genero, raza){
+    this.super = Animal              // --> Invocamos el constructor Animal
+    this.super(nombre, genero)      // --> Ejecuta Super, si super es la f constructura
+//                                 //     animal, recibe sus parametros
+    this.raza = raza              // --> Creamos su Atributo nuevo
+}
+
+// Asignamos al prototipo de perro, que sea una instancia animal, (Perro hereda a Animal):
+
+Perros.prototype = new Animal() // --> Hace la herencia. No especificamos los parametros, ya que lo hacemos en  el constructor.
+Perros.prototype.constructor = Perros // Simplemente generamos su propio constructor al prototipo de Perros.
+
+
+// Sobreescritura de metodos del proto Padre al Hijo:
+
+Perros.prototype.saludo = function() {
+    console.log('Soy un perro y mi sonido es un ladrido')
+}
+
+Perros.prototype.ladrar = function() {
+    console.log('Guau, guau!')
+}
+
+// Ahora creamos nuestro nuevo perro:
+
+const PITI = new Perros('Piti', 'Macho', 'Desconocida')
+
+// Lo imprimimos:
+
+console.log(PITI)
+PITI.ladrar()
+PITI.saludo()
+
+// Ahora, en la consola vemos toda la cadena de herencia prototipica de nuestro nuevo objeto:
+// Sus atributos, siendo nombre y genero traidos por el Super / Animal, y raza el creado.
+
+// Podemos ver, que ahora su prototipo es Animal.
+// Donde esta el constructor de Perros
+// Y cuyo prototipo es Object, de JS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

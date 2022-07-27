@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+//  PROMESAS
+
+// Son como un if else
+
+function cuadradoPromise(value) {
+    if (typeof value !== "number") return Promise.reject('Valor no numerico')
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({
+                value: value,
+                result: value * value
+            }) 
+        }, 0 | Math.random() * 100)
+    })
+}
+
+cuadradoPromise(0)
+.then(obj => {
+    console.log(`Promise: ${obj.value}; ${obj.result}`)
+    return cuadradoPromise(1)
+})
+.then(obj => {
+    console.log(`Promise: ${obj.value}; ${obj.result}`)
+    return cuadradoPromise(2)
+})
+.then(obj => {
+    console.log(`Promise: ${obj.value}; ${obj.result}`)
+    return cuadradoPromise("3")     // Interrumpe, manda error
+})
+.then(obj => {
+    console.log(`Promise: ${obj.value}; ${obj.result}`)
+    return cuadradoPromise(4)
+})
+.then(obj => {
+    console.log(`Promise: ${obj.value}; ${obj.result}`)
+    console.log('Fin')  // Necesario para imprimir cuadradoPromise(4)
+})
+.catch(err => console.error(err));
+
+// Esta es otra forma de anidar y ordenar las ejecuciones, algunos llaman esto PromiseHelp
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

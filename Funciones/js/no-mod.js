@@ -1,0 +1,1 @@
+console.log("JS para navegadores viejos")

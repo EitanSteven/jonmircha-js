@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+//  Symbols
+
+// Symbol es un tipo de dato primitivo. Nos permiten crear identificadores unicos de referencia privada
+
+let id = "Hola"
+let id2 = "Hola"
+
+console.log(id === id2) // Devuelve true
+
+let id3 = Symbol()
+let id4 = Symbol()
+
+console.log(id3 === id4) // Devuelve Falso
+
+// Symbol("Nombre/Etiqueta": String | Number)
+
+
+
+
+const NAME = Symbol()
+const SALUDAR = Symbol()
+
+const persona = {
+    [NAME]: "Jhon",
+    edad: 27
+}
+
+console.log(persona)    // {Symbol(): "Jhon"}
+
+persona.NAME = "Jhonatan"
+console.log(persona)    // No afecta la propiedad Symbol previa, imprime las dos
+
+console.log(persona.NAME) // Devuelve Jhonatan
+console.log(persona[NAME]) // Devuelve Jhon
+
+persona[SALUDAR] = function () {
+    console.log('Hola')
+}
+
+persona[SALUDAR]()
+
+console.log('Inicia el for')
+for (let prop in persona) {
+    console.log(prop)
+    console.log(persona[prop])
+}
+
+// En este for no aparece el Symbolo Saludar
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

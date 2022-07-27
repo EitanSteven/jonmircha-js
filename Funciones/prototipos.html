@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Prototipos!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Prototipos de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~~~~ Empezando la Practica ~~~~~~~~~~~~')
+
+// POO (Programacion Orientada a Objetos)
+
+// Hay 4 conceptos a entender:
+
+// Las clases ---> Modelo a seguir (Machete)
+// Los objetos ---> Instancia de una clase.
+// |
+// |    Estos tienen...
+// |
+// --> Atributos: Caracteristica o Propiedad del Obj (Variables dentro de un Obj)
+// --> Metodos:   Acciones que un Obj puede realizar (funciones dentro de un Obj)
+
+// Ahora vamos a hacer una funcion constructora:
+/*
+function Animal (nombre, genero) {
+// Atributos:
+    this.nombre = nombre,   // this hace referencia a que los aprametros seran iguales
+    this.genero = genero,  // a esos mismos datos. Los almacenaran, y ocuparan el lugar 
+// Metodos:
+    this.sonar = function (){
+        console.log('Hago sonidos por que estoy vivo')
+    }
+}
+
+// Este va a ser el modelo de todos los animales, ahora creemos uno nuevo a partir de esta funcion constructora:
+
+const PITI = new Animal('Piti', 'Macho')
+const JINA = new Animal('Jina', 'Hembra')
+
+console.log(PITI)
+console.log(JINA)
+*/
+// Ahora, si nececitamos varias instancias del Obj animal, no nececitamos copiar y pegar
+
+// Pero, al tener los metodos dentro de nuestra funcion, se produce un gran desperdicio de memoria de nuestra aplicacion, lo mejor seria sacarlos, ya que todas las instancias generan este metodo. Lo que haremos, sera agregarlos al prototipo, por fuera de la funcion de la siguiente manera:
+
+function Animal(nombre, genero) {
+// Atributos:
+    this.nombre = nombre,
+    this.genero = genero
+}
+
+// Metodos agregados por fuera de la funcion:
+
+Animal.prototype.sonido = function() {
+    console.log('Hago sonidos por que estoy vivo')
+}
+
+Animal.prototype.saludo = function() {
+    console.log(`Hola! Me llamo: ${this.nombre}`)
+}
+
+// Ahora inicializamos las instancias:
+
+const PITI = new Animal('Piti', 'Macho')
+const JINA = new Animal('Jina', 'Hembra')
+
+console.log(PITI, JINA)
+
+PITI.sonido()
+PITI.saludo()
+
+JINA.sonido()
+JINA.saludo()
+
+// Con esto todo sigue funcionando igual, pero con mejor rendimiento y el espacio en memoria de la app.
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

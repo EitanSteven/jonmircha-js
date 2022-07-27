@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #454545; color: white;">
+    <h1>DOM</h1>
+    <p>EL DOM es como los navegadores representan el documento html para trabajarlo con js. EL DOM es una interfaz estarandisada. La API para manejar el HTML o el CSS</p>
+
+    <h2>DOM: Document Object Model</h2>
+    <h2>CSSOM: CSS Object Model</h2>
+    <h3>Web APis:</h3>
+   <ul>
+    <li>Eventos</li>
+    <li>Forms</li>
+    <li>AJAX - Fetch</li>
+    <li>History</li>
+    <li>Web Storage</li>
+    <li>Geolocation</li>
+    <li>Drag & Drop</li>
+    <li>Indexed DB</li>
+    <li>Canvas</li>
+    <li>Match Media</li>
+    <li>Etc...</li>
+   </ul>
+
+   <br><hr><br>
+
+   <h3>Manejo del DOM</h3>
+   <p id="que-es">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure delectus vero mollitia voluptate velit eveniet soluta ratione, tempore nesciunt dolorem rerum porro quisquam unde magni sunt officiis, quaerat, distinctio incidunt.</p>
+   <nav id="menu">
+       <ul>
+           <li><a href="#">Seccion</a></li>
+           <li><a href="#">Seccion 1</a></li>
+           <li><a href="#">Seccion 2</a></li>
+           <li><a href="#">Seccion 3</a></li>
+           <li><a href="#">Seccion 4</a></li>
+       </ul>
+   </nav>
+
+   <input type="text" name="nombre" placeholder="nombre">
+   <a class="link-dom" href="int.html" data-Descripcion="Document Obj Model" data-atr="Data Atr 2" style="background-color: #000; color: #fff;">DOM</a>
+   <section class="cards">
+       <figure class="card">
+            <img src="https://placeimg.com/200/200/tech" alt="Tech">
+            <figcaption>Tech</figcaption>
+       </figure>
+       <figure class="card">
+            <img src="https://placeimg.com/200/200/animals" alt="animals">
+            <figcaption>Animals</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/pepole" alt="Pepole">
+            <figcaption>Pepole</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/arch" alt="Arch">
+            <figcaption>Arch</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/nature" alt="nature">
+            <figcaption>nature</figcaption>
+        </figure>
+   </section>
+
+   <template id="template-card">
+    <figure class="card">
+        <img>
+        <figcaption></figcaption>
+    </figure>
+   </template>
+
+   <h4>Eventos en JS</h4>
+   <h3>Manejadores de Eventos</h3>
+
+   <button onclick="holaMundo()">Evento con atributo HTML</button>
+   <br><br>
+   <button id="manejador-semantico">Evento con manejador Semantico</button>
+   <br><br>
+   <button id="manejador-multiple">Evento Multiple</button>
+   <br><br>
+   <button id="btn-saludo">Saludo</button>
+   <br><br>
+   <button id="event-remover">Removiendo eventos con manejadores multiples</button>
+   <br><br><br><br>
+   <h4>Flujo de Eventos</h4>
+   <section class="eventos-flujo">
+       <div class="uno">
+        1
+        <div class="dos">
+            2
+            <div class="tres">
+                3
+                <a href="https://www.instagram.com/stardust_coincidence/" target="_blank" rel="noopener">Insta</a>
+            </div>
+        </div>
+       </div>
+   </section>
+
+   <br><br><br><br><br><br>
+
+   <h4>Manejo del BOM</h4>
+
+   <button id="Abr-Ventana">Abrir Ventana</button>
+   <br><br><br><br>
+   <button id="Cerr-Ventana">Cerrar Ventana</button>
+   <br><br><br><br>
+   <button id="Impr-Ventana">Imprimir Ventana</button>
+
+
+
+
+
+
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script src="./dom.js"></script>
+</body>
+</html>

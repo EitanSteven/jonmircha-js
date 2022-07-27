@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Metodos estaticos!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Metodos estaticos, getters y setters de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+// Un metodo estatico se puede ejecutar aun cuando su clase no fue instanciada
+
+class Perro {
+    constructor(nombre, genero) {
+        this.nombre = nombre,
+        this.genero = genero
+    }
+
+    static queEres() {
+        console.log('Los perros somos mamiferos de la familia de los caninos.')
+    }
+
+}
+
+
+// Ahora vamos a poder invocar el metodo sin crear una instancia perro:
+
+Perro.queEres()
+
+// Luego, estan los metodos Getters y Setters, que nos permiten tomar y asignar un valor a un atributo previamente vacio, al que no se le pasa ningun parametro, por ej:
+
+class cat {
+    constructor(nombre, genero) {
+        this.nombre = nombre,
+        this.genero = genero,
+        this.raza = null
+    }
+
+    // Ahora vamos a crear el metodo para obtener y modificar dicha propiedad es:
+
+    get getRaza() {
+        return this.raza
+    }
+
+    set setRaza(raza) {
+        this.raza = raza
+    }
+}
+
+// Ahora podemos utilizar estos metodos, pero como son para modificar un atributo, los manejamos por igual:
+
+const MICHI = new cat('Michi', 'Macho')
+
+// Michi.setRaza('Desconocida') --> Da error, hay que tratar al metodo como atributo.
+
+console.log(MICHI)
+
+// Con el anterior log vemos que Michi tiene Raza: Null
+
+MICHI.setRaza = 'Desconocida'
+
+// Agregamos la raza, en este caso, no es desconocida, y ahora la obtenemos:
+
+console.log(MICHI.getRaza)
+
+// En este ultimo log, vemos como ya figura su raza añadida.
+
+console.log(MICHI)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

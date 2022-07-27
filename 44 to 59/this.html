@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+// THIS
+//
+// En este contexto, THIS hace referencia al objeto global Windows:
+
+console.log(this)
+
+console.log(this === window)    // True
+
+// Como tal, ahora podemos crear una variable en el obj
+
+this.nombre = "Contexto Global"
+console.log(this.nombre)
+
+// Asi mismo, podemos crear una f para imprimir el nombre del obj global Windows
+
+function imprimir() {
+    console.log(`Funcion Impresora Global: ${this.nombre}`)
+}
+
+imprimir()
+
+// Ahora vamos a crear un obj con la key nombre y su value, ademas de un metodo para imprimir dicho nombre
+
+const obj = {
+nombre: "Contexto Obj1",
+imprimir: function() {
+    console.log(`${this.nombre}`)
+}}
+
+obj.imprimir()
+
+// Al trabajar de esta manera, se recomienda trabajar con funciones anonimas, ya que estas crean su propio scope {}, mientras que las () => Crean un enlace con el contexto del padre.  
+
+const obj2 = {
+    nombre: 'Objeto 2',
+    imprimir
+}
+
+obj2.imprimir()
+
+// Ahora vamos a crear un obj con el metodo imprimir pero con una () => {}
+
+const obj3 = {
+    nombre: 'Objeto 3',
+    imprimir: () => {
+        console.log(`Impresor obj3 ${this.nombre}`)
+    }
+}
+
+obj3.imprimir()
+
+// Como vemos, esta funcion no toma como contexto el obj en el que se encuentra, si no que, enlaza al contexto global, donde this fue creado.
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

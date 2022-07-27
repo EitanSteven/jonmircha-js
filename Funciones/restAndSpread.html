@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Rest y Spread!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion de Rest y Spread de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~~~~ Empezando la Practica ~~~~~~~~~~~~')
+
+
+// Los parametros REST, nos ayudan a expandir infinitamente de forma virtual, todos los posibles datos que podemos recibir. Por ejemplo, no sabes cuantos valores a sumar va a recibir una calculadora. Para eso, usamos el parametro REST:
+
+function sumar(a,b, ...c) {
+    let resultado = a + b
+
+    c.forEach(function(n){
+        resultado += n
+    })
+
+    return resultado
+}
+
+console.log(sumar(1,2,3,4))
+
+// Para explicar y entender el funcionamiento de esta calculadora infinita, podemos tomar a C como un Array. Entonces le aplicamos el parametro .forEach, lo que quiere decir que "Por Cada Parametro del Array C" (forEach), ejecutamos una funcion que sume cada numero de ese array, al resultado y finalmente lo retorne.
+
+
+//      Spread Operator
+
+// Este sirve para fusionar dos array, por ejemplo:
+
+const arr1 = [1,2,3,4,5],
+      arr2 = [6,7,8,9,10]
+
+const arr3 = [...arr1, ...arr2]
+console.log(arr3)
+
+// Asi tenemos como resultado 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

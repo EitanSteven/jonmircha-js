@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROXIES</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+// PROXIES
+// En lugar de usas clases como modelo, usan un obj literal, genera una copia, y permite que realices operaciones como validacion. Tendras un obj de vinculacion entre el obj del que te basas y la nueva instancia generada. Esto gracias a un obj especial de los proxies llamada Handler o manejador.
+
+const Persona = {
+    nombre: "",
+    apellido: "",
+    edad: []
+}
+
+const manejador = {
+    set(obj, prop, valor) {
+        obj[prop] = valor
+    }
+}
+
+const Eitan = new Proxy(Persona, manejador)
+Eitan.nombre = "Eitan"
+Eitan.apellido = "Gil"
+Eitan.edad = 19
+Eitan.Twitter = "@Vizcacha"
+console.log(Eitan)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

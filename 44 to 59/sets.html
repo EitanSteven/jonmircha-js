@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+
+// SETS
+
+const Ashe = new Set([1,2,3,3,4,true,false,false,"Hola","hola", {},{}])
+console.log(Ashe)
+console.log(Ashe.size)
+
+const set = new Set()
+set.add(1)
+set.add(2)
+set.add({})
+set.add("Ashe")
+console.log(set)
+
+// Para tomar un dato a aprtir del index de un set:
+
+let arr = Array.from(set)
+console.log(arr[3])
+set.delete(1)
+set.delete(arr[1])
+console.log(set)
+
+console.log(set.has("Ashe"))    // Comprueba si esta en el set
+
+// Para limpiar un set:
+
+set.clear()
+console.log(set)
+
+// Este tipo de dato puede servir por ejemplo, para guardar los generos aceptados de nuestra app pelicula, y manipular mas facil o comprobar los generos que se ingresan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Objetos Literales!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Objetos Literales de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+// Vamos a crear un objeto, usando variables previamente creadas para asignar el valor de las Keys del objeto:
+
+let nombre = 'Piti', edad = 7
+
+const perro = {
+    nombre: nombre,
+    edad: edad,
+    sonido: function() {
+        console.log('Guau Guau Guau!!!')
+    }
+}
+
+console.log(perro)
+perro.sonido()
+
+// Hay una forma en la que si la key tiene el mismo nombre que la variable, podemos ahorrar texto de la siguiente manera, y utilizarlo en otro objeto:
+
+const dog = {
+    nombre,
+    edad
+}
+
+console.log(dog)
+
+// Tambien se le pueden agregar atributos y metodos al nuevo objeto:
+
+const cat = {
+    nombre,
+    edad,
+    raza: 'Siames',
+    sonido() {
+        console.log('Miau miau, miau!')
+    }
+}
+
+console.log(cat)
+cat.sonido()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

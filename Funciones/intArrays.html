@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int Arrays!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a Arrays/Arreglos de Java Script!</h1>
+
+<script>
+
+
+// Arreglos, tipo de Dato Complejo que puede albergar mas Datos.
+
+    const nombreArreglo = ['Esto', ' es', ' mi', 1, 'er', ' arreglo']
+
+// Se puede, o suele inicializar un Array como Constante, ya que CONST, hace referencia al tipo de dato (Array), mas no al contenido. Entonces, el contenido del arreglo puede variar, aun siendo declarado como constante.
+
+    console.log(nombreArreglo)
+
+// Tambien podemos acceder a un elemento especifico del Array segun su indice:
+
+    console.log(nombreArreglo[2])
+
+// Otra forma de inicializar un Array con datos es, y con buena practica es:
+
+    const arrayConDatos = Array.of ('a', ' b', 1, 2)
+    console.log(arrayConDatos)
+
+// Un metodo del constructor de Array sirve para llenar un Array:
+
+    const arrayLleno = Array(100).fill('x')
+    console.log(arrayLleno)
+
+// Otro metodo para agregar un elemento a un Array es:
+
+    const coloresRGB = Array.of ('Rojo', ' Azul')
+    coloresRGB.push(' Verde')
+    console.log(coloresRGB)
+
+// A su vez, el metodo para eliminar el ultimo elemento es:
+
+    const eliminarUltimo = Array.of ('Primer Elemento', ' Ultimo Elemento')
+    console.log(eliminarUltimo)
+    eliminarUltimo.pop()
+    console.log(eliminarUltimo)
+
+// El ultimo metodo, nos permite ejecutar una funcion, por cada n Elemento del Array. Por ejemplo, si quiero que cada color RGB vaya en un list item:
+
+    coloresRGB.forEach(function(el){   // "el" (Element), parametro que hace REF a los
+        console.log(`<li>${el}</li>`) // elementos del array.
+    })
+
+// A su vez, podemos agregarle un segundo parametro para que los li tengan una referencia de id unica, es decir, un indice (Index):
+
+    coloresRGB.forEach(function(el, index){
+        console.log(`<li id = "${index}">${el}</li>`)
+    })
+
+
+
+</script>
+</body>
+</html>

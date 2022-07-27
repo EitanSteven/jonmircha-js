@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int While y For!</title>
+</head>
+<body style="background-color: rgb(30, 30, 30);"> 
+
+<h1 style="color: #fff;">Introduccion a While y For de Java Script!</h1>
+
+<script>
+
+
+
+
+
+
+
+console.log('~~~~~~~~~ Empezando la Practica ~~~~~~~~~')
+
+
+// While ejecuta el codigo mientras se cumpla la condicion, cuidado de no causar un bucle:
+
+/*
+let contador = 0
+
+while (contador <= 10) {
+    console.log(contador)
+    contador++
+}
+*/
+
+// Estructura do while:
+
+/*
+let contador = 9
+
+do {                          //   haz {}
+    console.log(contador)    //        lo que se quiere
+    contador ++             //         que haga
+} while(contador <= 10)    //      } mientras(Condicion)
+
+*/
+
+
+// Estructura for, la mas usada:
+
+
+/*
+for (Inicializacion de Variable; decremento o incremento) {
+    Sentencias que ejecuta el for
+}
+*/
+
+
+for (let i = 0; i <= 5; i++) {
+    console.log('for ', i)
+}
+
+let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i])
+}
+
+// Otra variante del for es for in, que recorre en bucle todas las propiedades/keys de un objeto:
+
+const Usuario = {
+    nombre: 'Eitan',    
+    apellido: 'Gil',    
+    edad: 19            
+}
+
+// Lo que buscamos en el siguiente forin, es imprimir todo el objeto, con sus llaves, y el valor de cada una, pero para acceder a este valor, el metodo de objeto.key no funciona, y usamos objeto[key]
+
+for (const key in Usuario) {
+   console.log(`Key: ${key} Value: ${Usuario[key]}`)
+}
+
+// Otra variante es el for of, nos permite recorrer otros tipos de objetos iterables, como arrays:
+
+for (const element of numeros) {
+   console.log(element) 
+}
+
+let cadena = "Hola mundo"
+
+for (const character of cadena) {
+    console.log(character)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

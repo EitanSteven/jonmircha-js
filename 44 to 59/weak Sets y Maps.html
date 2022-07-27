@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weak Sets&Maps</title>
+</head>
+<body style="background-color: rgb(83, 83, 83);">
+    <h1 style="color: #fff;">Practicando JS</h1>
+
+<script>
+
+
+
+
+
+
+
+
+
+console.log('`~ ~ ~ Comenzando Practica ~ ~ ~')
+
+// Mapas debiles y conjuntos debiles
+//
+// Son elementos no iterables
+// No se pueden eliminar todos los elementos de una vez, solo uno por uno
+// No se puede ver su Size
+// Son mas livianos en memoria 
+
+// No se pueden inicializar con valores
+const ws = new WeakSet()
+// Solo aceptan objetos:
+
+let valor1 = {"Valor1": 1}
+let valor2 = {"Valor1": 2}
+let valor3 = {"Valor1": 3}
+
+ws.add(valor1)
+ws.add(valor2)
+ws.add(valor3)
+console.log(ws)
+console.log(ws.has(valor1))
+ws.delete(valor2)
+console.log(ws)
+
+// Lo mismo con los wm
+
+const wm = new WeakMap()
+
+let llave1= {}
+let llave2= {}
+let llave3= {}
+
+wm.set(llave1, 1)
+wm.set(llave2, "Ashe")
+wm.set(llave3, {})
+
+console.log(wm.delete(llave3))
+console.log(wm)
+console.log(wm.has(llave1))
+console.log(wm.get(llave1))
+
+// Para ver como mejora el rendimiento, haremos que se imprima este wm por 1 segundo
+
+setInterval(() => console.log(wm), 1000)
+
+// Luego, hacemos que despues de 5s se borren los datos de las llaves, y el obj asi lo hace
+
+setTimeout(() => {
+    llave1 = null
+    llave2 = null
+    llave3 = null 
+}, 5000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
